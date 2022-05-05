@@ -1,4 +1,5 @@
 import NavbarComponent from "./components/NavbarComponent";
+import ProductListComponent from "./components/ProductListComponent";
 import ProductList from "./db.json";
 import { useState } from "react";
 function App() {
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <NavbarComponent cartCount={cartCount} cartItems={ProductList} />
+      <ProductListComponent products={ProductList.products} />
     </div>
   );
 }
