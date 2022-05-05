@@ -29,8 +29,9 @@ function ProductComponent(props) {
 
         <Card.Body>
           <Card.Title>{props.product.name}</Card.Title>
-
-          <Button variant="success">Add To Cart</Button>
+          <div className="d-grid gap-2">
+            <Button variant="success">Add To Cart</Button>
+          </div>
         </Card.Body>
       </Card>
       <Modal show={show} onHide={handleClose}>
@@ -65,8 +66,8 @@ function ProductComponent(props) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
+          <Button variant="success" onClick={handleClose}>
+            Add To Cart
           </Button>
         </Modal.Footer>
       </Modal>
