@@ -1,4 +1,5 @@
 import { Card, Button, Modal, Carousel, Badge } from "react-bootstrap";
+import ReactStars from "react-rating-stars-component";
 import { useState } from "react";
 function ProductComponent(props) {
   const [show, setShow] = useState(false);
@@ -47,8 +48,18 @@ function ProductComponent(props) {
             })}
           </Carousel>
           <h5>price: ${props.product.price}</h5>
-          <h5>product Description:</h5>
+          <h6>product Description:</h6>
           <p>{props.product.description}</p>
+          <div className="modal__rating">
+            <ReactStars
+              count={5}
+              value={Number(props.product.rate)}
+              size={24}
+              isHalf={true}
+              edit={false}
+            />
+            ({props.product.rate}){props.product.reviewsCount}
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

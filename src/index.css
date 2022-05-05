@@ -9,3 +9,7 @@
 .card__product__card--hover:hover{
   cursor: pointer;
 }
+.modal__rating{
+  display: flex;
+  align-items: center;
+}
