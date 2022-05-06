@@ -7,7 +7,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  // what happens when add to cart button clicked
   const onAdd = (product) => {
+    /* used price because data doesn't have id  because I want the cart menu to show unique products
+    and if a product already exist in the cart I increase the quantity (qty) is added to the object
+    */
     const exist = cartItems.find((x) => x.price === product.price);
     if (exist) {
       setCartItems(

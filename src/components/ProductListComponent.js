@@ -8,6 +8,9 @@ function ProductListComponent(props) {
   const [productsPerPage] = useState(3);
   const [productsShowen, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  /*let's pretend I'm using axios or fetch api
+    I could use JSON server as a backend and get the products but I wanted to keep it very simple
+  */
   useEffect(() => {
     setProducts(products);
   }, []);
